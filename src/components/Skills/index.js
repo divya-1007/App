@@ -58,6 +58,7 @@ const SkillsContainer = styled.div`
 
 const Skill = styled.div`
   width: 100%;
+  flex: 1; /* Change from width: 100%; to flex: 1; */
   max-width: 500px;
   background: ${({ theme }) => theme.card};
   border: 0.1px solid #854CE6;
@@ -72,8 +73,6 @@ const Skill = styled.div`
     max-width: 330px;
     padding: 10px 36px;
   }
-
-
 `
 
 const SkillTitle = styled.h2`

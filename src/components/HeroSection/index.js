@@ -1,22 +1,12 @@
-import {useState} from 'react'
 import HeroBgAnimation from '../HeroBgAnimation'
 import { HeroContainer, HeroBg, HeroLeftContainer, Img, HeroRightContainer, HeroInnerContainer, TextLoop,
-     Title, Span, SubTitle,Wrapper,Bodys, ResumeButton } from './HeroStyle'
-import HeroImg from '../../images/girls_2.png'
+     Title, Span, SubTitle, ResumeButton } from './HeroStyle'
+import HeroImg from '../../images/divya-bg.png'
 import Typewriter from 'typewriter-effect';
 import { Bio } from '../../data/constants';
-import Skills from '../Skills';
-import Experience from '../Experience';
-import Education from '../Education';
-import Contact from '../Contact'
-import Projects from '../Projects';
-import Footer from '../Footer';
-import ProjectDetails from "../ProjectDetails";
 
 
 const HeroSection = () => {
-  const [openModal, setOpenModal] = useState({ state: false, project: null });
-
     
     return (
         <div id="about">
@@ -57,22 +47,6 @@ const HeroSection = () => {
                     </HeroRightContainer>
                 </HeroInnerContainer>
             </HeroContainer>
-           <Bodys>
-          <Wrapper>
-            <Skills />
-            <Experience />
-          </Wrapper>
-          <Projects openModal={openModal} setOpenModal={setOpenModal} />
-          <Wrapper>
-            <Education />
-            <Contact />
-          </Wrapper>
-          <Footer />
-          {openModal.state &&
-            <ProjectDetails openModal={openModal} setOpenModal={setOpenModal} />
-          }
-        </Bodys>
-
         </div>
     )
 }
